@@ -13,15 +13,22 @@ function App() {
     const pattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i
     let isUUID = pattern.test(uuid)
     if(isUUID) {
-      const uuidWithoutHyphen = uuid.replaceAll('-', '')
-      setUuidResult(uuidWithoutHyphen)
+      return true
     } else {
       setUuidResult("Invalid UUID")
+      return false
     }
   }
 
   const handleChange = (event) => {
     setUuid(event.target.value)
+  }
+
+  const removeHyphen = () => {
+    if(validateUUID()) {
+      const uuidWithoutHyphen = uuid.replaceAll('-', '')
+      setUuidResult(uuidWithoutHyphen)
+    }
   }
 
   return (
@@ -38,7 +45,7 @@ function App() {
         <form onSubmit={handleSubmit}>
           <label for="uuid">UUID</label>
           <input type="text" id="uuid" onChange={handleChange} name="uuid" />
-          <button onClick={validateUUID}>Remove Hyphen</button>
+          <button onClick={removeHyphen}>Remove Hyphen</button>
         </form>
       </header>
     </div>
