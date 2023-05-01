@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
+import { UilCopy } from '@iconscout/react-unicons'
 
 function App() {
   const [uuid, setUuid] = useState([]);
@@ -57,6 +58,10 @@ function App() {
     setUuidResult(lowercase)
   }
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(uuidResult)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -66,7 +71,14 @@ function App() {
         <p className="medium">
           UUID Converter
         </p>
-        <p>{uuidResult}</p>
+        <div class="d-flex flex-row">
+          <p class="px-3">{uuidResult}</p>
+          {uuidResult.length > 0 && 
+            <div data-toggle="tooltip" data-placement="top" title="Copy">
+              <UilCopy class="result__icon" onClick={copyToClipboard} size="40" color="#61DAFB" />
+            </div>
+          }
+        </div>
         <div class="input-group mb-3 px-5">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">UUID</span>

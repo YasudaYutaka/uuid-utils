@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #343a40;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,4 +28,8 @@
 
 .small {
   font-size: 0.75rem;
+}
+
+.result__icon {
+  cursor: pointer;
 }

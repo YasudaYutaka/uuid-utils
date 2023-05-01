@@ -2,8 +2,9 @@
   "name": "codespaces-react",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://yasudayutaka.github.io/uuid-converter",
+  "homepage": "http://yasudayutaka.github.io/uuid-converter",
   "dependencies": {
+    "@iconscout/react-unicons": "^2.0.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
@@ -14,8 +15,8 @@
   },
   "scripts": {
     "start": "BROWSER=none WDS_SOCKET_PORT=0 react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
