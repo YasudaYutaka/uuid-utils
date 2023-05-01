@@ -60,20 +60,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
         <p>
           GitHub Codespaces <span className="heart">♥️</span> React
         </p>
-        <p className="small">
+        <p className="medium">
           UUID Converter
         </p>
         <p>{uuidResult}</p>
-        <label for="uuid">UUID</label>
-        <input type="text" id="uuid" onChange={handleChange} name="uuid" />
-        <button onClick={addHyphen}>Add Hyphen</button>
-        <button onClick={removeHyphen}>Remove Hyphen</button>
-        <button onClick={toUppercase}>To Uppercase</button>
-        <button onClick={toLowercase}>To Lowercase</button>
+        <div class="input-group mb-3 px-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">UUID</span>
+          </div>
+          <input onChange={handleChange} type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button onClick={addHyphen} class="btn btn-outline-primary">Add Hyphen</button>
+          <button onClick={removeHyphen} class="btn btn-outline-primary">Remove Hyphen</button>
+          <button onClick={toUppercase} class="btn btn-outline-primary">To Uppercase</button>
+          <button onClick={toLowercase} class="btn btn-outline-primary">To Lowercase</button>
+        </div>
       </header>
     </div>
   );
