@@ -10,21 +10,19 @@ function App() {
   const [uuid, setUuid] = useState([]);
   const [uuidResult, setUuidResult] = useState([]);
 
-  const handleToUppercase = () => {
-    setUuidResult(toUppercase(uuid));
-  };
+  const setInputAndResult = (functionToCall) => {
+    const result = functionToCall(uuid);
+    setUuid(result);
+    setUuidResult(result);
+  }
 
-  const handleToLowercase = () => {
-    setUuidResult(toLowercase(uuid));
-  };
+  const handleToUppercase = () => setInputAndResult(toUppercase);
 
-  const handleAddHyphen = () => {
-    setUuidResult(addHyphen(uuid));
-  };
+  const handleToLowercase = () => setInputAndResult(toLowercase);
 
-  const handleRemoveHyphen = () => {
-    setUuidResult(removeHyphen(uuid));
-  };
+  const handleAddHyphen = () => setInputAndResult(addHyphen);
+
+  const handleRemoveHyphen = () => setInputAndResult(removeHyphen);
 
   return (
     <div className="App">
