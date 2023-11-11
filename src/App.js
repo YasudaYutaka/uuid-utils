@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p className="medium">
-          UUID Converter
+          UUID Utils
         </p>
         <Result resultText={uuidResult} />
         <Input value={uuid} onChange={setUuid} onNewUUID={setInputAndResult} />
