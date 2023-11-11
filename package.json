@@ -2,7 +2,7 @@
   "name": "uuid-utils",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://yasudayutaka.github.io/uuid-converter",
+  "homepage": "http://yasudayutaka.github.io/uuid-utils",
   "dependencies": {
     "@iconscout/react-unicons": "^2.0.2",
     "@testing-library/jest-dom": "^5.16.5",
