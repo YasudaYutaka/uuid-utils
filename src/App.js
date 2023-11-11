@@ -1,5 +1,6 @@
 import './App.css';
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Input from "./components/input";
 import { UilCopy } from '@iconscout/react-unicons'
 
 function App() {
@@ -83,7 +84,7 @@ function App() {
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">UUID</span>
           </div>
-          <input onChange={handleChange} type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          <Input value={uuid} onChange={setUuid} />
         </div>
         <div class="btn-group" role="group" aria-label="Basic example">
           <button onClick={addHyphen} class="btn btn-outline-primary">Add Hyphen</button>
