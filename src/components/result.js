@@ -2,8 +2,8 @@ import React from "react";
 import { UilCopy } from '@iconscout/react-unicons'
 
 /**
- * A reusable button component that takes a text and onClick function as props.
- * Renders a button element with the text and onClick function as props.
+ * A reusable component that displays a result text and an icon to copy the text to the clipboard.
+ * Takes a resultText prop that contains the text to display.
  */
 function Result({ resultText }) {
 
