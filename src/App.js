@@ -10,19 +10,23 @@ function App() {
   const [uuid, setUuid] = useState([]);
   const [uuidResult, setUuidResult] = useState([]);
 
-  const setInputAndResult = (functionToCall) => {
+  const transformUUID = (functionToCall) => {
     const result = functionToCall(uuid);
-    setUuid(result);
-    setUuidResult(result);
+    setInputAndResult(result)
   }
 
-  const handleToUppercase = () => setInputAndResult(toUppercase);
+  const setInputAndResult = (uuid) => {
+    setUuid(uuid);
+    setUuidResult(uuid);
+  }
 
-  const handleToLowercase = () => setInputAndResult(toLowercase);
+  const handleToUppercase = () => transformUUID(toUppercase);
 
-  const handleAddHyphen = () => setInputAndResult(addHyphen);
+  const handleToLowercase = () => transformUUID(toLowercase);
 
-  const handleRemoveHyphen = () => setInputAndResult(removeHyphen);
+  const handleAddHyphen = () => transformUUID(addHyphen);
+
+  const handleRemoveHyphen = () => transformUUID(removeHyphen);
 
   return (
     <div className="App">
@@ -31,12 +35,7 @@ function App() {
           UUID Converter
         </p>
         <Result resultText={uuidResult} />
-        <div class="input-group mb-3 px-5">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">UUID</span>
-          </div>
-          <Input value={uuid} onChange={setUuid} />
-        </div>
+        <Input value={uuid} onChange={setUuid} onNewUUID={setInputAndResult} />
         <div class="btn-group" role="group" aria-label="Basic example">
           <Button text="Add Hyphen" onClick={handleAddHyphen} />
           <Button text="Remove Hyphen" onClick={handleRemoveHyphen} />
