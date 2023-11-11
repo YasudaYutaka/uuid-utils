@@ -6,7 +6,7 @@ import React from "react";
  */
 function Button({ text, onClick }) {
   return (
-    <button onClick={onClick} class="btn btn-outline-primary">{text}</button>
+    <button onClick={onClick} class="btn btn-primary">{text}</button>
   );
 }
 
