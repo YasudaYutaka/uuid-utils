@@ -3,7 +3,8 @@ import { UilCopy } from '@iconscout/react-unicons'
 
 /**
  * A reusable component that displays a result text and an icon to copy the text to the clipboard.
- * Takes a resultText prop that contains the text to display.
+ * 
+ * @param {string} resultText - The text to display as the result.
  */
 function Result({ resultText }) {
 
