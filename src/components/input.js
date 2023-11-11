@@ -24,7 +24,7 @@ function Input({ value, onChange, onNewUUID }) {
       </div>
       <input type="text" value={value} class="form-control" onChange={handleChange} />
       <div class="input-group-append">
-        <button class="input-group-text btn-info" type="button" onClick={generateUUID}>Generate new UUID</button>
+        <button class="input-group-text btn-info white-text-btn" type="button" onClick={generateUUID}>Generate new UUID</button>
       </div>
     </div>
   );

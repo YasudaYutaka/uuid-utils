@@ -16,3 +16,7 @@
 .result__icon {
   cursor: pointer;
 }
+
+.white-text-btn {
+  color: #fff;
+}
