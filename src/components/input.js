@@ -18,7 +18,7 @@ function Input({ value, onChange, onNewUUID }) {
   }
 
   return (
-    <div class="input-group mb-3 px-5 d-flex justify-content-center align-items-center">
+    <div class="input-group mb-3 px-5 w-50 d-flex justify-content-center align-items-center">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">UUID</span>
       </div>
