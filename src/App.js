@@ -37,7 +37,7 @@ function App() {
           UUID Utils
         </p>
         <Result resultText={uuidResult} />
-        <Input value={uuid} onChange={setUuid} onNewUUID={setInputAndResult} />
+        <Input prependText={"UUID"} value={uuid} onChange={setUuid} onNewUUID={setInputAndResult} buttonText={"Generate a new UUID"} />
         <div class="btn-group" role="group" aria-label="Basic example">
           <Button text="Add Hyphen" onClick={handleAddHyphen} />
           <Button text="Remove Hyphen" onClick={handleRemoveHyphen} />
