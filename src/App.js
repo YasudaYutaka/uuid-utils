@@ -3,21 +3,23 @@ import React, { useState } from "react";
 import Input from "./components/input";
 import Button from './components/button';
 import Result from './components/result';
-import { addHyphen, removeHyphen } from "./utils/uuidUtils";
+import { addHyphen, removeHyphen, validateUUIDWithoutHyphen, validateUUID } from "./utils/uuidUtils";
 import { toUppercase, toLowercase } from "./utils/stringUtils";
 
 function App() {
   const [uuid, setUuid] = useState([]);
   const [uuidResult, setUuidResult] = useState([]);
+  
+  const setInputAndResult = (uuid) => {
+    if (validateUUID(uuid) || validateUUIDWithoutHyphen(uuid)) {
+      setUuid(uuid);
+    }
+    setUuidResult(uuid);
+  }
 
   const transformUUID = (functionToCall) => {
     const result = functionToCall(uuid);
     setInputAndResult(result)
-  }
-
-  const setInputAndResult = (uuid) => {
-    setUuid(uuid);
-    setUuidResult(uuid);
   }
 
   const handleToUppercase = () => transformUUID(toUppercase);

@@ -31,7 +31,7 @@ export const addHyphen = (uuid) =>
         ? uuid 
         : validateUUIDWithoutHyphen(uuid) 
         ? `${uuid.slice(0, 8)}-${uuid.slice(8, 12)}-${uuid.slice(12, 16)}-${uuid.slice(16, 20)}-${uuid.slice(20)}` 
-        : "Invalid UUID: should not contain hyphens";
+        : "Invalid UUID without hyphen";
 
 /**
  * Removes hyphens from a UUID if it has them.
