@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/uuid-utils/*"
+  to = "/:splat"
+  status = 301
+  force = true
