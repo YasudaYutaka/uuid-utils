@@ -5,7 +5,7 @@
  * @returns {boolean} - True if the UUID is valid, false otherwise.
  */
 export const validateUUIDWithoutHyphen = (uuid) => {
-    const pattern = /^[0-9a-f]{8}[0-9a-f]{4}[0-5][0-9a-f]{3}[089ab][0-9a-f]{3}[0-9a-f]{12}$/i
+    const pattern = /^[0-9a-fA-F]{32}$/
     return pattern.test(uuid)
 }
 
@@ -16,8 +16,8 @@ export const validateUUIDWithoutHyphen = (uuid) => {
  * @returns {boolean} - True if the UUID is valid, false otherwise.
  */
 export const validateUUID = (uuid) => {
-    const pattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i
-    return  pattern.test(uuid)
+    const pattern = /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/
+    return pattern.test(uuid)
 }
 
 /**
