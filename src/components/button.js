@@ -1,4 +1,3 @@
-import "../styles/button.css";
 import React from "react";
 
 /**
@@ -9,7 +8,7 @@ import React from "react";
  */
 function Button({ text, onClick, icon }) {
   return (
-    <button onClick={onClick} class="btn btn-primary button">
+    <button onClick={onClick} class="btn btn-primary button m-1 d-inline-flex align-items-center gap-2">
       {icon && <span className="icon">{icon}</span>}
       {text}
     </button>
