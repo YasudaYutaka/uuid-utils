@@ -33,16 +33,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p className="medium">
+        <h1 className="medium">
           UUID Utils
-        </p>
+        </h1>
         <Result resultText={uuidResult} />
         <Input prependText={"UUID"} value={uuid} onChange={setUuid} onNewUUID={setInputAndResult} buttonText={"Generate a new UUID"} />
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <Button text="Add Hyphen" onClick={handleAddHyphen} />
-          <Button text="Remove Hyphen" onClick={handleRemoveHyphen} />
-          <Button text="To Uppercase" onClick={handleToUppercase} />
-          <Button text="To Lowercase" onClick={handleToLowercase} />
+        <div  role="group" aria-label="Basic example">
+          <Button icon={<i className="bi bi-plus"></i>} text="Add Hyphen" onClick={handleAddHyphen} />
+          <Button icon={<i className="bi bi-dash"></i>} text="Remove Hyphen" onClick={handleRemoveHyphen} />
+          <Button icon={<i class="bi bi-arrow-up"></i>} text="To Uppercase" onClick={handleToUppercase} />
+          <Button icon={<i class="bi bi-arrow-down"></i>} text="To Lowercase" onClick={handleToLowercase} />
         </div>
       </header>
     </div>

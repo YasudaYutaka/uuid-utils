@@ -1,3 +1,4 @@
+import "../styles/button.css";
 import React from "react";
 
 /**
@@ -6,9 +7,12 @@ import React from "react";
  * @param {string} text - The text to display on the button.
  * @param {function} onClick - A function to be called when the button is clicked.
  */
-function Button({ text, onClick }) {
+function Button({ text, onClick, icon }) {
   return (
-    <button onClick={onClick} class="btn btn-primary">{text}</button>
+    <button onClick={onClick} class="btn btn-primary button">
+      {icon && <span className="icon">{icon}</span>}
+      {text}
+    </button>
   );
 }
 
