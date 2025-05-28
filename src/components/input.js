@@ -1,5 +1,4 @@
 import React from "react";
-import {v4 as uuidv4} from 'uuid';
 
 /** 
  * A reusable input component that displays a UUID input field and a button to generate a new UUID.
