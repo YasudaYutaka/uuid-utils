@@ -5,6 +5,7 @@ import React from "react";
  * 
  * @param {string} text - The text to display on the button.
  * @param {function} onClick - A function to be called when the button is clicked.
+ * @param {ReactNode} [icon] - An optional icon to display inside the button.
  */
 function Button({ text, onClick, icon }) {
   return (
