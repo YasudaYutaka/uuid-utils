@@ -15,7 +15,7 @@ The application will start running at [http://localhost:3000](http://localhost:3
 
 ## Usage
 
-To generate a new UUID, click the "Generate a new UUID" button. The generated UUID will be displayed in the result field. You can copy the UUID to your clipboard by clicking the copy icon next to the result field.
+To generate a new UUID, click the "Generate UUID" button. The generated UUID will be displayed in the result field. You can copy the UUID to your clipboard by clicking the copy icon next to the result field.
 
 The application also provides the following functionalities:
 
