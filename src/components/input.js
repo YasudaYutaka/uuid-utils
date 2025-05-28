@@ -28,7 +28,7 @@ function Input({value, onChange }) {
   };
 
   return (
-    <div class="mb-3 px-5 w-25 d-flex flex-column justify-content-center align-items-center">
+    <div class="mb-3 px-5 w-50 d-flex flex-column justify-content-center align-items-center">
       <div class="input-group d-flex">
         <input type="text" class="form-control input-purple" value={value} placeholder="UUID" onChange={handleChange} />
         <div class="input-group-append">
