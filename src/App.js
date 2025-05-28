@@ -5,21 +5,30 @@ import Button from './components/button';
 import { addHyphen, removeHyphen, validateUUIDWithoutHyphen, validateUUID } from "./utils/uuidUtils";
 import { toUppercase, toLowercase } from "./utils/stringUtils";
 import {v4 as uuidv4} from 'uuid';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 function App() {
   const [uuid, setUuid] = useState([]);
   const [uuidResult, setUuidResult] = useState([]);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   
   const setInputAndResult = (uuid) => {
     if (validateUUID(uuid) || validateUUIDWithoutHyphen(uuid)) {
       setUuid(uuid);
+    } else {
+      setSnackbarOpen(true);
     }
     setUuidResult(uuid);
   }
 
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
+  }
+
   const transformUUID = (functionToCall) => {
     const result = functionToCall(uuid);
-    setInputAndResult(result)
+    setInputAndResult(result);
   }
 
   const generateUUID = () => {
@@ -49,6 +58,11 @@ function App() {
           <Button icon={<i class="bi bi-arrow-down"></i>} text="To Lowercase" onClick={handleToLowercase} />
         </div>
       </header>
+      <Snackbar open={snackbarOpen} autoHideDuration={3000} onClose={handleSnackbarClose} anchorOrigin={{ vertical: "bottom", horizontal: "center" }}>
+        <Alert onClose={handleSnackbarClose} severity="error" sx={{ width: '100%' }}>
+          Invalid UUID!
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
