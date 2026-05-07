@@ -10,7 +10,6 @@ import Alert from '@mui/material/Alert';
 
 function App() {
   const [uuid, setUuid] = useState([]);
-  const [uuidResult, setUuidResult] = useState([]);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   
   const setInputAndResult = (uuid) => {
@@ -19,7 +18,7 @@ function App() {
     } else {
       setSnackbarOpen(true);
     }
-    setUuidResult(uuid);
+
   }
 
   const handleSnackbarClose = () => {
@@ -58,6 +57,20 @@ function App() {
           <Button icon={<i class="bi bi-arrow-down"></i>} text="To Lowercase" onClick={handleToLowercase} />
         </div>
       </header>
+      <div className="devbox-banner">
+        <div className="devbox-banner__content">
+          <span className="devbox-banner__title">UUID Utils is now part of DevBox 🚀</span>
+          <span className="devbox-banner__desc">A collection of simple developer tools like UUID Generator, JSON Formatter, Text Diff and more.</span>
+        </div>
+        <a
+          href="https://yasudayutaka.github.io/devbox/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-purple devbox-banner__cta"
+        >
+          Open DevBox <i className="bi bi-box-arrow-up-right"></i>
+        </a>
+      </div>
       <Snackbar open={snackbarOpen} autoHideDuration={3000} onClose={handleSnackbarClose} anchorOrigin={{ vertical: "bottom", horizontal: "center" }}>
         <Alert onClose={handleSnackbarClose} severity="error" sx={{ width: '100%' }}>
           Invalid UUID!

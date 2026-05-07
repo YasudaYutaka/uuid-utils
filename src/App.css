@@ -16,6 +16,58 @@
   color: white;
 }
 
+.devbox-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #252536;
+  border-top: 1px solid rgba(79, 70, 229, 0.35);
+  padding: 0.75rem 1.5rem;
+  z-index: 100;
+}
+
+.devbox-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.devbox-banner__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e2f0;
+}
+
+.devbox-banner__desc {
+  font-size: 0.75rem;
+  color: #9090a8;
+  line-height: 1.4;
+}
+
+.devbox-banner__cta {
+  white-space: nowrap;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .devbox-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .devbox-banner__cta {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
 .result__icon {
   cursor: pointer;
 }
